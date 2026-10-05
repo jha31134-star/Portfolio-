@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aryan Jha | AI &amp; ML Student</title>
+  <meta name="description" content="Portfolio of Aryan Jha, a second-year AI and Machine Learning student building web projects and learning applied ML.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html">Aryan Jha</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav id="navLinks">
+      <a href="about.html">About</a><a href="skills.html">Skills</a><a href="projects.html">Projects</a><a href="education.html">Education</a><a href="achievements.html">Achievements</a><a href="experience.html">Experience</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="Switch light or dark theme">Dark</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="kicker">2nd-year AI &amp; ML student</p>
+        <h1>Aryan Jha</h1>
+        <p class="tagline">I build web projects and teach myself how machines learn, one small model at a time.</p>
+        <div class="cta">
+          <a class="btn primary" href="projects.html">View projects</a>
+          <a class="btn" href="Aryan_Jha_Resume.pdf" download>Download resume</a>
+          <a class="btn" href="contact.html">Contact me</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="avatar" role="img" aria-label="Profile photo placeholder">AJ</div>
+        <!-- Replace the avatar with: <img class="avatar" src="profile.jpg" alt="Aryan Jha"> -->
+        <figure class="loss">
+          <svg viewBox="0 0 300 140" role="img" aria-label="A training loss curve that falls as epochs increase">
+            <line x1="30" y1="10" x2="30" y2="120" class="axis"/>
+            <line x1="30" y1="120" x2="290" y2="120" class="axis"/>
+            <path class="curve" d="M30 20 C60 90, 90 105, 130 108 S200 114, 290 116"/>
+          </svg>
+          <figcaption>loss vs. epoch: still training</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>&copy; <span id="year"></span> Aryan Jha</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

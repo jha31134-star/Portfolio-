@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Aryan Jha</title>
+  <meta name="description" content="Projects page of Aryan Jha, second-year AI and Machine Learning student.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html">Aryan Jha</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav id="navLinks">
+      <a href="about.html">About</a><a href="skills.html">Skills</a><a href="projects.html" aria-current="page">Projects</a><a href="education.html">Education</a><a href="achievements.html">Achievements</a><a href="experience.html">Experience</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="Switch light or dark theme">Dark</button>
+  </header>
+
+  <main>
+    <section id="projects" class="page-section">
+      <h2>Projects</h2>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="web">Web</button>
+        <button class="chip" data-filter="ml">ML</button>
+      </div>
+      <div class="project-grid">
+        <article class="project" data-type="web">
+          <img src="aryan-scan.png" alt="Aryan_Scan home page screenshot" loading="lazy">
+          <h3>Aryan_Scan</h3>
+          <p>A webtoon and manga reading site with search, separate manga and manhwa sections, and titles that open on click.</p>
+          <p class="tech">HTML, CSS, JavaScript</p>
+          <p class="links"><a href="https://github.com/YOUR_USERNAME/aryan-scan">Source code</a><a href="https://YOUR-LIVE-LINK.vercel.app">Live demo</a></p>
+        </article>
+        <article class="project" data-type="ml">
+          <img src="smart-frame-hospital.png" alt="SmartFrame Hospital demo screenshot" loading="lazy">
+          <h3>SmartFrame Hospital</h3>
+          <p>A hospital management system built on frame-based knowledge representation. Patient frames inherit default slots from PATIENT and PERSON frames, and a symptom knowledge base suggests the right department. Includes patient records, search, and a frame explorer.</p>
+          <p class="tech">Python, Tkinter, SQLite, JavaScript (web demo)</p>
+          <p class="links"><a href="smart-frame-hospital.html">Live demo</a><a href="smartframe_main.py">Python source</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>&copy; <span id="year"></span> Aryan Jha</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

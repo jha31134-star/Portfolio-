@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Aryan Jha</title>
+  <meta name="description" content="Contact page of Aryan Jha, second-year AI and Machine Learning student.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html">Aryan Jha</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav id="navLinks">
+      <a href="about.html">About</a><a href="skills.html">Skills</a><a href="projects.html">Projects</a><a href="education.html">Education</a><a href="achievements.html">Achievements</a><a href="experience.html">Experience</a><a href="resume.html">Resume</a><a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="Switch light or dark theme">Dark</button>
+  </header>
+
+  <main>
+    <section id="contact" class="page-section">
+      <h2>Contact me</h2>
+      <p>Open to internships and collaboration. The quickest way to reach me is email.</p>
+      <ul class="plain">
+        <li>Email: <a href="mailto:jha31134@gmail.com">jha31134@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/aryan-jha-00367238b" target="_blank" rel="noopener">linkedin.com/in/aryan-jha-00367238b</a></li>
+        <li>GitHub: <a href="https://github.com/jha31134-star" target="_blank" rel="noopener">github.com/jha31134-star</a></li>
+      </ul>
+      <form id="contactForm" class="contact-form">
+        <label>Name <input name="name" required></label>
+        <label>Message <textarea name="message" rows="4" required></textarea></label>
+        <button class="btn primary" type="submit">Send by email</button>
+      </form>
+    </section>
+  </main>
+
+  <footer><p>&copy; <span id="year"></span> Aryan Jha</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

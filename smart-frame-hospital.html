@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmartFrame Hospital demo | Aryan Jha</title>
+  <meta name="description" content="Live browser demo of SmartFrame Hospital, a hospital management system built on frame-based knowledge representation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html">Aryan Jha</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav id="navLinks">
+      <a href="about.html">About</a><a href="skills.html">Skills</a><a href="projects.html" aria-current="page">Projects</a><a href="education.html">Education</a><a href="achievements.html">Achievements</a><a href="experience.html">Experience</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="Switch light or dark theme">Dark</button>
+  </header>
+
+  <main>
+    <section id="demo" class="page-section">
+      <p class="crumb"><a href="projects.html">&larr; Back to projects</a></p>
+      <h2>SmartFrame Hospital: live demo</h2>
+      <p>A hospital management system that stores patients as <strong>frames</strong> (a knowledge representation technique from AI). Every patient frame inherits default slots from a PATIENT frame, which inherits from PERSON, and a small symptom knowledge base suggests the right department. This is a browser version of my Python and Tkinter desktop app, so you can try it right here.</p>
+      <p class="demo-note">Demo data is fictional and stays in your browser only. Nothing is sent to a server.</p>
+
+      <div class="demo-tabs" role="tablist" aria-label="Demo sections">
+        <button class="demo-tab active" role="tab" aria-selected="true" data-panel="panel-add">Patient Management</button>
+        <button class="demo-tab" role="tab" aria-selected="false" data-panel="panel-search">Search Patient</button>
+        <button class="demo-tab" role="tab" aria-selected="false" data-panel="panel-frames">Frame Explorer</button>
+        <button class="demo-tab" role="tab" aria-selected="false" data-panel="panel-all">All Patients</button>
+      </div>
+
+      <div class="demo-panel" id="panel-add">
+        <p>Try symptoms such as <em>headache, dizziness</em> or <em>vomiting, diarrhea</em>. Leave optional fields empty to see the frame defaults. Saving an existing Patient ID replaces that record.</p>
+        <form id="patientForm" class="demo-form">
+          <label>Patient ID * <input name="id" required></label>
+          <label>Name * <input name="name" required></label>
+          <label>Age * <input name="age" inputmode="numeric" required></label>
+          <label>Gender <input name="gender"></label>
+          <label>Phone number <input name="phone"></label>
+          <label>Address <input name="address"></label>
+          <label>Blood group <input name="blood"></label>
+          <label>Allergies <input name="allergies"></label>
+          <label class="wide">Symptoms (comma separated) <input name="symptoms" placeholder="headache, dizziness"></label>
+          <label>Doctor <input name="doctor"></label>
+          <label>Room <input name="room"></label>
+          <label>Bed number <input name="bed"></label>
+          <div class="wide"><button class="btn primary" type="submit">Save patient</button></div>
+        </form>
+        <p id="saveMsg" class="demo-msg" role="status"></p>
+      </div>
+
+      <div class="demo-panel" id="panel-search" hidden>
+        <div class="demo-search">
+          <label>Patient ID <input id="searchId" placeholder="Try P001"></label>
+          <button class="btn primary" id="searchBtn" type="button">Search</button>
+        </div>
+        <div id="searchOut" role="status"></div>
+      </div>
+
+      <div class="demo-panel" id="panel-frames" hidden>
+        <div id="framesOut"></div>
+      </div>
+
+      <div class="demo-panel" id="panel-all" hidden>
+        <p><button class="btn" id="resetBtn" type="button">Reset to sample data</button></p>
+        <div id="allOut"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>&copy; <span id="year"></span> Aryan Jha</p></footer>
+  <script src="script.js"></script>
+  <script src="hospital-demo.js"></script>
+</body>
+</html>
